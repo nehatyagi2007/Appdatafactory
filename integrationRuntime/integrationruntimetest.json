@@ -1,0 +1,6 @@
+{
+	"name": "integrationruntimetest",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}
