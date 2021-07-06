@@ -1,0 +1,12 @@
+{
+	"name": "rcclinkedservice",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=False;data source=testsrv010721.database.windows.net;initial catalog=RCCDB;user id=azure010721",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkFQUEZBQ1RPUlkwMTA3MjFfMTI0Yjk3MjAtNTNkOC00NjA3LTk2YzctMzQ0Yzc0NzgyOTFmIg0KfQ=="
+		}
+	}
+}
