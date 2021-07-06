@@ -1,0 +1,16 @@
+{
+	"name": "SqlServerdataset2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "rcclinkedservice",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "RETURNDETAILS"
+		}
+	}
+}
