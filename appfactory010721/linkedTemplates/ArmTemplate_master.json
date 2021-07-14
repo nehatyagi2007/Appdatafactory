@@ -15,6 +15,18 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'rcclinkedservice'"
 		},
+		"AzureSqlitbadb_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlitbadb'"
+		},
+		"AzureSqlrccdb_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlrccdb'"
+		},
+		"AzureSqlTESTDB_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlTESTDB'"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -47,6 +59,15 @@
 					},
 					"rcclinkedservice_connectionString": {
 						"value": "[parameters('rcclinkedservice_connectionString')]"
+					},
+					"AzureSqlitbadb_connectionString": {
+						"value": "[parameters('AzureSqlitbadb_connectionString')]"
+					},
+					"AzureSqlrccdb_connectionString": {
+						"value": "[parameters('AzureSqlrccdb_connectionString')]"
+					},
+					"AzureSqlTESTDB_connectionString": {
+						"value": "[parameters('AzureSqlTESTDB_connectionString')]"
 					}
 				}
 			},

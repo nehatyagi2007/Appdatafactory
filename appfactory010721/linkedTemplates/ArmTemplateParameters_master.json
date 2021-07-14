@@ -11,6 +11,15 @@
 		"rcclinkedservice_connectionString": {
 			"value": ""
 		},
+		"AzureSqlitbadb_connectionString": {
+			"value": ""
+		},
+		"AzureSqlrccdb_connectionString": {
+			"value": ""
+		},
+		"AzureSqlTESTDB_connectionString": {
+			"value": ""
+		},
 		"containerUri": {
 			"value": ""
 		},
