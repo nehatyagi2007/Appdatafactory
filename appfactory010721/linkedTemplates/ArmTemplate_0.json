@@ -259,7 +259,7 @@
 				"schema": [],
 				"typeProperties": {
 					"schema": "TESTDB",
-					"table": "panmasternew"
+					"table": "NEW"
 				}
 			},
 			"dependsOn": [
@@ -360,7 +360,9 @@
 							},
 							"sink": {
 								"type": "AzureSqlSink",
-								"writeBehavior": "insert"
+								"writeBehavior": "insert",
+								"tableOption": "autoCreate",
+								"disableMetricsCollection": false
 							},
 							"enableStaging": false,
 							"translator": {
