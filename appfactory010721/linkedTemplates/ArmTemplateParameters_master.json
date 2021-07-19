@@ -5,10 +5,7 @@
 		"factoryName": {
 			"value": "appfactory010721"
 		},
-		"azurebloklinkservice2_connectionString": {
-			"value": ""
-		},
-		"rcclinkedservice_connectionString": {
+		"AzureSqlTESTDB_connectionString": {
 			"value": ""
 		},
 		"AzureSqlitbadb_connectionString": {
@@ -17,8 +14,17 @@
 		"AzureSqlrccdb_connectionString": {
 			"value": ""
 		},
-		"AzureSqlTESTDB_connectionString": {
+		"azurebloklinkservice2_connectionString": {
 			"value": ""
+		},
+		"rcclinkedservice_connectionString": {
+			"value": ""
+		},
+		"DelimitedText1_properties_typeProperties_fileName": {
+			"value": "@CONCAT('Incremental-', pipeline().RunId, '.txt')"
+		},
+		"DelimitedText1_properties_typeProperties_folderPath": {
+			"value": "adftutorial/incrementalcopy"
 		},
 		"containerUri": {
 			"value": ""

@@ -7,13 +7,9 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "appfactory010721"
 		},
-		"azurebloklinkservice2_connectionString": {
+		"AzureSqlTESTDB_connectionString": {
 			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'azurebloklinkservice2'"
-		},
-		"rcclinkedservice_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'rcclinkedservice'"
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlTESTDB'"
 		},
 		"AzureSqlitbadb_connectionString": {
 			"type": "secureString",
@@ -23,9 +19,21 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureSqlrccdb'"
 		},
-		"AzureSqlTESTDB_connectionString": {
+		"azurebloklinkservice2_connectionString": {
 			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureSqlTESTDB'"
+			"metadata": "Secure string for 'connectionString' of 'azurebloklinkservice2'"
+		},
+		"rcclinkedservice_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'rcclinkedservice'"
+		},
+		"DelimitedText1_properties_typeProperties_fileName": {
+			"type": "string",
+			"defaultValue": "@CONCAT('Incremental-', pipeline().RunId, '.txt')"
+		},
+		"DelimitedText1_properties_typeProperties_folderPath": {
+			"type": "string",
+			"defaultValue": "adftutorial/incrementalcopy"
 		},
 		"containerUri": {
 			"type": "string",
@@ -54,11 +62,8 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"azurebloklinkservice2_connectionString": {
-						"value": "[parameters('azurebloklinkservice2_connectionString')]"
-					},
-					"rcclinkedservice_connectionString": {
-						"value": "[parameters('rcclinkedservice_connectionString')]"
+					"AzureSqlTESTDB_connectionString": {
+						"value": "[parameters('AzureSqlTESTDB_connectionString')]"
 					},
 					"AzureSqlitbadb_connectionString": {
 						"value": "[parameters('AzureSqlitbadb_connectionString')]"
@@ -66,8 +71,17 @@
 					"AzureSqlrccdb_connectionString": {
 						"value": "[parameters('AzureSqlrccdb_connectionString')]"
 					},
-					"AzureSqlTESTDB_connectionString": {
-						"value": "[parameters('AzureSqlTESTDB_connectionString')]"
+					"azurebloklinkservice2_connectionString": {
+						"value": "[parameters('azurebloklinkservice2_connectionString')]"
+					},
+					"rcclinkedservice_connectionString": {
+						"value": "[parameters('rcclinkedservice_connectionString')]"
+					},
+					"DelimitedText1_properties_typeProperties_fileName": {
+						"value": "[parameters('DelimitedText1_properties_typeProperties_fileName')]"
+					},
+					"DelimitedText1_properties_typeProperties_folderPath": {
+						"value": "[parameters('DelimitedText1_properties_typeProperties_folderPath')]"
 					}
 				}
 			},
