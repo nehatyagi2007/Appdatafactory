@@ -139,6 +139,10 @@
 							"type": "String"
 						}
 					}
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureSqlitbadb",
+					"type": "LinkedServiceReference"
 				}
 			}
 		],
