@@ -1,0 +1,22 @@
+{
+	"name": "DelimitedText1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "azurebloklinkservice2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureBlob",
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"treatEmptyAsNull": true
+			},
+			"fileName": {
+				"value": "@CONCAT('Incremental-', pipeline().RunId, '.txt')",
+				"type": "Expression"
+			},
+			"folderPath": "adftutorial/incrementalcopy"
+		}
+	}
+}
