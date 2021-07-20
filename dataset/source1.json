@@ -1,0 +1,55 @@
+{
+	"name": "source1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlitbadb",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "PAN",
+				"type": "varchar"
+			},
+			{
+				"name": "FIRSTNAME",
+				"type": "varchar"
+			},
+			{
+				"name": "SURNAME",
+				"type": "varchar"
+			},
+			{
+				"name": "DOB",
+				"type": "date"
+			},
+			{
+				"name": "GENDER",
+				"type": "char"
+			},
+			{
+				"name": "UIDNUM",
+				"type": "varchar"
+			},
+			{
+				"name": "STATE",
+				"type": "varchar"
+			},
+			{
+				"name": "PANGENDT",
+				"type": "date"
+			},
+			{
+				"name": "LastModifiedtime",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "PANMASTER"
+		}
+	}
+}

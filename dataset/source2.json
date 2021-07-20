@@ -1,0 +1,42 @@
+{
+	"name": "source2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "rccsdbsql",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "PAN",
+				"type": "varchar"
+			},
+			{
+				"name": "DATEFILED",
+				"type": "date"
+			},
+			{
+				"name": "NAME",
+				"type": "varchar"
+			},
+			{
+				"name": "UIDNUM",
+				"type": "varchar"
+			},
+			{
+				"name": "DOB",
+				"type": "date"
+			},
+			{
+				"name": "INCOME",
+				"type": "real",
+				"precision": 7
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "RETURNDETAILS"
+		}
+	}
+}

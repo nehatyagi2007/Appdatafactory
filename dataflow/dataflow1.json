@@ -1,0 +1,31 @@
+{
+	"name": "dataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "source1",
+						"type": "DatasetReference"
+					},
+					"name": "itbadb"
+				},
+				{
+					"dataset": {
+						"referenceName": "source2",
+						"type": "DatasetReference"
+					},
+					"name": "rccdb"
+				}
+			],
+			"sinks": [],
+			"transformations": [
+				{
+					"name": "Join1"
+				}
+			],
+			"script": "source(output(\n\t\tPAN as string,\n\t\tFIRSTNAME as string,\n\t\tSURNAME as string,\n\t\tDOB as date,\n\t\tGENDER as string,\n\t\tUIDNUM as string,\n\t\tSTATE as string,\n\t\tPANGENDT as date,\n\t\tLastModifiedtime as timestamp\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> itbadb\nsource(output(\n\t\tPAN as string,\n\t\tDATEFILED as date,\n\t\tNAME as string,\n\t\tUIDNUM as string,\n\t\tDOB as date,\n\t\tINCOME as float\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> rccdb\nitbadb, rccdb join(itbadb@PAN == rccdb@PAN,\n\tjoinType:'inner',\n\tbroadcast: 'auto')~> Join1"
+		}
+	}
+}
