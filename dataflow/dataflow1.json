@@ -23,9 +23,12 @@
 			"transformations": [
 				{
 					"name": "Join1"
+				},
+				{
+					"name": "final"
 				}
 			],
-			"script": "parameters{\n\tparameter1 as string\n}\nsource(output(\n\t\tPAN as string,\n\t\tFIRSTNAME as string,\n\t\tSURNAME as string,\n\t\tDOB as date,\n\t\tGENDER as string,\n\t\tUIDNUM as string,\n\t\tSTATE as string,\n\t\tPANGENDT as date,\n\t\tLastModifiedtime as timestamp\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> itbadb\nsource(output(\n\t\tPAN as string,\n\t\tDATEFILED as date,\n\t\tNAME as string,\n\t\tUIDNUM as string,\n\t\tDOB as date,\n\t\tINCOME as float\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> rccdb\nitbadb, rccdb join(itbadb@PAN == rccdb@PAN,\n\tjoinType:'inner',\n\tbroadcast: 'auto')~> Join1"
+			"script": "parameters{\n\tparameter1 as string\n}\nsource(output(\n\t\tPAN as string,\n\t\tFIRSTNAME as string,\n\t\tSURNAME as string,\n\t\tDOB as date,\n\t\tGENDER as string,\n\t\tUIDNUM as string,\n\t\tSTATE as string,\n\t\tPANGENDT as date,\n\t\tLastModifiedtime as timestamp\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> itbadb\nsource(output(\n\t\tPAN as string,\n\t\tDATEFILED as date,\n\t\tNAME as string,\n\t\tUIDNUM as string,\n\t\tDOB as date,\n\t\tINCOME as float\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> rccdb\nitbadb, rccdb join(itbadb@PAN == rccdb@PAN,\n\tjoinType:'inner',\n\tbroadcast: 'auto')~> Join1\nJoin1 select(mapColumn(\n\t\tPAN = itbadb@PAN,\n\t\tFIRSTNAME,\n\t\tSURNAME,\n\t\tDOB = itbadb@DOB,\n\t\tGENDER,\n\t\tUIDNUM = itbadb@UIDNUM,\n\t\tSTATE,\n\t\tPANGENDT,\n\t\tLastModifiedtime,\n\t\tPAN = rccdb@PAN,\n\t\tDATEFILED,\n\t\tNAME,\n\t\tUIDNUM = rccdb@UIDNUM,\n\t\tDOB = rccdb@DOB,\n\t\tINCOME\n\t),\n\tskipDuplicateMapInputs: false,\n\tskipDuplicateMapOutputs: false) ~> final"
 		}
 	}
 }
