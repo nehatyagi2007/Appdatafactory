@@ -19,7 +19,7 @@
 						"referenceName": "dataflow1",
 						"type": "DataFlowReference",
 						"parameters": {
-							"parameter1": "pan"
+							"mypram": "pan"
 						}
 					},
 					"compute": {
