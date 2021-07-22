@@ -1,0 +1,16 @@
+{
+	"name": "Sink",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlTESTDB",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "testdb",
+			"table": "final"
+		}
+	}
+}
