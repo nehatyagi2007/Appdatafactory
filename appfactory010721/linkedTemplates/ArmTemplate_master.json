@@ -23,6 +23,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'azurebloklinkservice2'"
 		},
+		"changetrackinglinked_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'changetrackinglinked'"
+		},
 		"rcclinkedservice_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'rcclinkedservice'"
@@ -30,6 +34,10 @@
 		"rccsdbsql_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'rccsdbsql'"
+		},
+		"sqltoblobchange_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'sqltoblobchange'"
 		},
 		"DelimitedText1_properties_typeProperties_fileName": {
 			"type": "string",
@@ -78,11 +86,17 @@
 					"azurebloklinkservice2_connectionString": {
 						"value": "[parameters('azurebloklinkservice2_connectionString')]"
 					},
+					"changetrackinglinked_connectionString": {
+						"value": "[parameters('changetrackinglinked_connectionString')]"
+					},
 					"rcclinkedservice_connectionString": {
 						"value": "[parameters('rcclinkedservice_connectionString')]"
 					},
 					"rccsdbsql_connectionString": {
 						"value": "[parameters('rccsdbsql_connectionString')]"
+					},
+					"sqltoblobchange_connectionString": {
+						"value": "[parameters('sqltoblobchange_connectionString')]"
 					},
 					"DelimitedText1_properties_typeProperties_fileName": {
 						"value": "[parameters('DelimitedText1_properties_typeProperties_fileName')]"

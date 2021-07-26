@@ -17,10 +17,16 @@
 		"azurebloklinkservice2_connectionString": {
 			"value": ""
 		},
+		"changetrackinglinked_connectionString": {
+			"value": ""
+		},
 		"rcclinkedservice_connectionString": {
 			"value": ""
 		},
 		"rccsdbsql_connectionString": {
+			"value": ""
+		},
+		"sqltoblobchange_connectionString": {
 			"value": ""
 		},
 		"DelimitedText1_properties_typeProperties_fileName": {
