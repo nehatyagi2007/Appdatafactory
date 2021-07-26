@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Lookuplastcgangetrackingactivity",
+				"name": "LookupLastChangeTrackingVersionActivity",
 				"type": "Lookup",
 				"dependsOn": [],
 				"policy": {
@@ -57,7 +57,7 @@
 				"type": "Copy",
 				"dependsOn": [
 					{
-						"activity": "Lookuplastcgangetrackingactivity",
+						"activity": "LookupLastChangeTrackingVersionActivity",
 						"dependencyConditions": [
 							"Succeeded"
 						]
