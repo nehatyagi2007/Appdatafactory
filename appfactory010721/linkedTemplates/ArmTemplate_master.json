@@ -39,6 +39,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'sqltoblobchange'"
 		},
+		"AzureBlobsrc_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobsrc'"
+		},
 		"DelimitedText1_properties_typeProperties_fileName": {
 			"type": "string",
 			"defaultValue": "@CONCAT('Incremental-', pipeline().RunId, '.txt')"
@@ -97,6 +101,9 @@
 					},
 					"sqltoblobchange_connectionString": {
 						"value": "[parameters('sqltoblobchange_connectionString')]"
+					},
+					"AzureBlobsrc_connectionString": {
+						"value": "[parameters('AzureBlobsrc_connectionString')]"
 					},
 					"DelimitedText1_properties_typeProperties_fileName": {
 						"value": "[parameters('DelimitedText1_properties_typeProperties_fileName')]"

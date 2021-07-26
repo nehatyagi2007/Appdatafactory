@@ -29,6 +29,9 @@
 		"sqltoblobchange_connectionString": {
 			"value": ""
 		},
+		"AzureBlobsrc_connectionString": {
+			"value": ""
+		},
 		"DelimitedText1_properties_typeProperties_fileName": {
 			"value": "@CONCAT('Incremental-', pipeline().RunId, '.txt')"
 		},
