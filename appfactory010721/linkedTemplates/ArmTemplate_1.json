@@ -322,7 +322,17 @@
 						},
 						"userProperties": [],
 						"typeProperties": {
-							"storedProcedureName": "[[dbo].[Update_ChangeTracking_Version]"
+							"storedProcedureName": "[[dbo].[Update_ChangeTracking_Version]",
+							"storedProcedureParameters": {
+								"CurrentTrackingVersion": {
+									"value": "CHANGE_TRACKING_CURRENT_VERSION()",
+									"type": "Int64"
+								},
+								"TableName": {
+									"value": "DBO.RETURNDETAILS",
+									"type": "String"
+								}
+							}
 						},
 						"linkedServiceName": {
 							"referenceName": "changetrackinglinked",
