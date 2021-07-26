@@ -67,6 +67,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
+						"sqlReaderQuery": "select DBO.RETURNDETAILS.PAN,DBO.RETURNDETAILS.DATEFILED,DBO.RETURNDETAILS.NAME,DBO.RETURNDETAILS.UIDNUM,DBO.RETURNDETAILS.DOB,DBO.RETURNDETAILS.INCOME,\n CT.SYS_CHANGE_VERSION, \nSYS_CHANGE_OPERATION from DBO.RETURNDETAILS\n RIGHT OUTER JOIN CHANGETABLE(CHANGES DBO.RETURNDETAILS, @{activity('LookupLastChangeTrackingVersionActivity').output.firstRow.SYS_CHANGE_VERSION}) \nas CT on DBO.RETURNDETAILS.PAN = CT.PAN where CT.SYS_CHANGE_VERSION <= @{activity('LookupCurrentChangeTrackingVersionActivity').output.firstRow.CurrentChangeTrackingVersion",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
