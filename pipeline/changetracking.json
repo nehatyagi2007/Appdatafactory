@@ -28,7 +28,7 @@
 				}
 			},
 			{
-				"name": "Lookupnewchangingactivity",
+				"name": "LookupCurrentChangeTrackingVersionActivity",
 				"type": "Lookup",
 				"dependsOn": [],
 				"policy": {
@@ -63,7 +63,7 @@
 						]
 					},
 					{
-						"activity": "Lookupnewchangingactivity",
+						"activity": "LookupCurrentChangeTrackingVersionActivity",
 						"dependencyConditions": [
 							"Succeeded"
 						]
