@@ -71,6 +71,7 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobStorageLocation",
+						"fileName": "data_0af3b30a-8366-47a1-88c8-87519e243bb2_33ec6b34-2882-4989-aeea-3c4bf654a925.txt",
 						"container": "adftutorial"
 					},
 					"columnDelimiter": ",",
@@ -94,7 +95,7 @@
 				"type": "AzureSqlTable",
 				"schema": [],
 				"typeProperties": {
-					"schema": "testdb.",
+					"schema": "testdb",
 					"table": "increment"
 				}
 			},
@@ -622,7 +623,7 @@
 								"type": "DelimitedTextSource",
 								"storeSettings": {
 									"type": "AzureBlobStorageReadSettings",
-									"fileListPath": "adftutorial/data_0af3b30a-8366-47a1-88c8-87519e243bb2_33ec6b34-2882-4989-aeea-3c4bf654a925.txt",
+									"recursive": true,
 									"enablePartitionDiscovery": false
 								},
 								"formatSettings": {
