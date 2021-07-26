@@ -1,0 +1,21 @@
+{
+	"name": "DelimitedTextchangetracking",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "sqltoblobchange",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "adftutorial"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
