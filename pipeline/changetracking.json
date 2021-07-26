@@ -144,11 +144,11 @@
 					"storedProcedureName": "[dbo].[Update_ChangeTracking_Version]",
 					"storedProcedureParameters": {
 						"CurrentTrackingVersion": {
-							"value": "CHANGE_TRACKING_CURRENT_VERSION()",
+							"value": "@{activity('LookupCurrentChangeTrackingVersionActivity').output.firstRow.CurrentChangeTrackingVersion}",
 							"type": "Int64"
 						},
 						"TableName": {
-							"value": "DBO.RETURNDETAILS",
+							"value": "@{activity('LookupLastChangeTrackingVersionActivity').output.firstRow.TableName}",
 							"type": "String"
 						}
 					}
